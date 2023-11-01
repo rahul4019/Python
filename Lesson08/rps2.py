@@ -48,6 +48,6 @@ while playAgain:
         print("\n🎉🎉🎉🎉")
         print("Thank you for playing!\n")
         playAgain = False
-     
+      
 
 sys.exit("Bye! 👋")
