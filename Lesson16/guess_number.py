@@ -51,7 +51,7 @@ def guess_number(name='PlayerOne'):
         print(f"\nGame count: {game_count}")
         print(f"\n{name}'s wins: {player_wins}")
 
-        print(f"\nWinning percentage: {round(player_wins/game_count * 100)}")
+        print(f"\nWinning percentage: {round(player_wins/game_count * 100)}%")
 
         print("\nPlay again, {name}?")
 
@@ -66,8 +66,8 @@ def guess_number(name='PlayerOne'):
         else:
             print("\n🎉🎉🎉🎉")
             print("Thank you for playing!\n")
-            sys.exit(f"Bye {name}! 👋")
-
+            return
+        
     return play_guess_number
 
 
@@ -85,4 +85,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     guess_num = guess_number(args.name)
-    guess_num()
+
+guess_my_number = guess_number()
+
+if __name__ == '__main__':
+    guess_my_number()

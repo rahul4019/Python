@@ -79,29 +79,12 @@ def rps(name='PlayerOne'):
         else:
             print("\n🎉🎉🎉🎉")
             print("Thank you for playing!\n")
-            sys.exit("Bye {name}! 👋")
+            return
 
     return play_rps
 
 
-if __name__ == "__main__":
-    import argparse
+rock_paper_scissiors = rps()
 
-    parser = argparse.ArgumentParser(
-        description="Provides a personalized game experience."
-    )
-
-    parser.add_argument(
-        "-n", "--name", metavar="name",
-        required=True, help='The name of the person playing the game'
-    )
-
-    parser.add_argument(
-        "-l", "--lang", metavar='language',
-        required=True, choices=["English", "Spanish", "Hindi"],
-        help="The language of the greeting."
-    )
-
-    args = parser.parse_args()
-    rock_paper_scissors = rps(args.name)
-    rock_paper_scissors()
+if __name__ == '__main__':
+    rock_paper_scissiors()
