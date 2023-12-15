@@ -13,8 +13,8 @@ except NameError:
     print('NameError means something is probable undefined.')
 except ZeroDivisionError:
     print('Please do not divide by zero.')
-except Exception as error:
-    print(error)
+except Exception as error: # catch every type of error
+    print(error) # print that error
 else:
     print('No errors!')
 finally:
